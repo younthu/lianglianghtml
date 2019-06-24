@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随便</title>
+	<style>
+     .active{
+     	background:yellow;
+     }
+     #box>div{
+        border:solid 3px silver;
+        width: 240px;height: 200px;
+        display: none;
+     }
+	</style>
+	<script>
+		window.onload=function(){
+			var a=document.getElementById('input');
+			var abtn=a.getElementsByTagName('input');
+			var b=document.getElementById('box');
+			var obox=b.getElementsByTagName('div');
+			obox[0].style.display='block';
+            for(var i=0;i<abtn.length;i++){
+               abtn[i].index=i;
+               abtn[i].onmouseover=function(){
+               	 for(var i=0;i<abtn.length;i++){
+               	 	abtn[i].className='';
+               	 	obox[i].style.display='none';
+               	 }
+                 this.className='active';
+                 obox[this.index].style.display='block';
+               }
+            }
+		}
+	</script>
+</head>
+<body>
+	<div id="input">
+		<input type="button" value="中国">
+		<input type="button" value="英国">
+		<input type="button" value="德国">
+		<input type="button" value="法国">
+		<input type="button" value="美国">
+	</div>	
+       <div id="box">
+    	       <div><p>中国，全称“中华人民共和国”，当今世界上最大的发展中国家。</p></div>
+    	       <div><p>英国，全称“大不列颠及北爱尔兰联合王国”，曾经的“日不落帝国”。</p></div>
+    	       <div><p>德国,全称“德意志联邦共和国”,老牌发达国家，制造强国。</p></div>
+    	       <div><p>法国，全称“法兰西第五共和国”，老牌发达国家。</p></div>
+    	       <div><p>美国，全称“美利坚合众国”，当今世界上最大发达国家和唯一的“超级大国”。</p></div>
+       </div>
+</body>
+</html>
