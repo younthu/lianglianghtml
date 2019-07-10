@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   <!---引入外部css样式文件-->
+    <link rel="stylesheet" href="../lianglianghtml/css/common.css">
+
+    <!--引入外部bootstrap文件 -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/js/bootstrap.min.js">
+   <script>
+       function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+    }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+            document.getElementById(cityName).style.display = "block";
+                 evt.currentTarget.className += " active";
+}
+
+            // 触发 id="defaultOpen" click 事件
+            document.getElementById("defaultOpen").click();
+   </script>
+</head>
+<body>
+    <div class="input-group">
+        <span  class="input-group-addon" ><span class="glyphicon glyphicon-search"></span></span>
+        <input type="text" class="form-control" placeholder="请输入内容">
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">湿垃圾</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">干垃圾</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">可回收物</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">有害垃圾</button>
+    </div>
+      
+    <div id="London" class="tabcontent">
+        <img src="./images/logo4.png" alt="湿垃圾">
+        <p><b>湿垃圾</b>是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p>
+        <h5>投放要求：</h5>
+        <ul>
+            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
+            <li>有包装物的湿垃圾应</li>
+        </ul>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <img src="./images/logo2.png" alt="干垃圾">
+        <p> <b>湿垃圾</b>是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p> 
+        <h5>投放要求：</h5>
+        <ul>
+            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
+            <li>有包装物的湿垃圾应</li>
+        </ul>
+    </div>
+      
+    <div id="Tokyo" class="tabcontent">
+        <img src="./images/logo1.jpg" alt="可回收物">
+        <p>湿垃圾是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p>
+        <h5>投放要求：</h5>
+        <ul>
+            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
+            <li>有包装物的湿垃圾应</li>
+        </ul>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <img src="./images/logo3.png" alt="有害垃圾">
+        <p>湿垃圾是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p> 
+        <h5>投放要求：</h5>
+        <ul>
+            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
+            <li>有包装物的湿垃圾应</li>
+        </ul>
+</body>
+</html>
