@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>垃圾分类指南</title>
    <!---引入外部css样式文件-->
     <link rel="stylesheet" href="../lianglianghtml/css/common.css">
 
@@ -12,24 +12,25 @@
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <script src="jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/js/bootstrap.min.js">
-   <script>
-       function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
+    <script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
-    }
+            }
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+        }
             document.getElementById(cityName).style.display = "block";
-                 evt.currentTarget.className += " active";
-}
-
-            // 触发 id="defaultOpen" click 事件
-            document.getElementById("defaultOpen").click();
-   </script>
+            evt.currentTarget.className += " active";
+    }
+    
+    // 触发 id="defaultOpen" click 事件
+   // document.getElementById("defaultOpen").click();
+   
+</script>
 </head>
 <body>
     <div class="input-group">
@@ -37,49 +38,95 @@
         <input type="text" class="form-control" placeholder="请输入内容">
     </div>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">湿垃圾</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">干垃圾</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">可回收物</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">有害垃圾</button>
+        <button class="tablinks test1" onclick="openCity(event, 'London')" >湿垃圾</button>
+        <button class="tablinks test2" onclick="openCity(event, 'Paris')">干垃圾</button>
+        <button class="tablinks test3" onclick="openCity(event, 'Tokyo')">可回收物</button>
+        <button class="tablinks test4" onclick="openCity(event, 'Use')">有害垃圾</button>
     </div>
       
     <div id="London" class="tabcontent">
-        <img src="./images/logo4.png" alt="湿垃圾">
-        <p><b>湿垃圾</b>是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p>
-        <h5>投放要求：</h5>
-        <ul>
-            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
-            <li>有包装物的湿垃圾应</li>
-        </ul>
+        <div class="mycher">         <!--class类名--->
+            <img src="./images/logo4.png" alt="湿垃圾">
+            <p><b>湿垃圾</b>是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p>
+            <h5>投放要求：</h5>
+             <ul > 
+                <li >纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
+                <li >有包装物的湿垃圾应将包装物取出分类投放，包装物请投放到相应的可回收容器中。</li>
+            </ul>
+        </div>
+        <div class="#">
+            <ul class="list-group">
+                <li class="list-group-item">#######</li>
+                <li class="list-group-item">#######</li>
+                <li class="list-group-item">#######</li>
+                <li class="list-group-item">#######</li>
+            </ul>
+        </div>
     </div>
-
+        
     <div id="Paris" class="tabcontent">
-        <img src="./images/logo2.png" alt="干垃圾">
-        <p> <b>湿垃圾</b>是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p> 
-        <h5>投放要求：</h5>
-        <ul>
-            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
-            <li>有包装物的湿垃圾应</li>
-        </ul>
+        <div class="mycher">
+            <img src="./images/logo2.png" alt="干垃圾">
+            <p> <b>干垃圾</b>是指除有害垃圾，可回收垃圾，湿垃圾以外的其他生活废弃物</p> 
+            <h5>投放要求：</h5>
+            <ul >
+                <li >尽量沥干水分</li>
+                <li >难以辨识类别的生活垃圾投入干垃圾容器中</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="list-group">
+                    <li class="list-group-item">#######</li>
+                    <li class="list-group-item">#######</li>
+                    <li class="list-group-item">#######</li>
+                    <li class="list-group-item">#######</li>
+            </ul>
+        </div>
     </div>
       
     <div id="Tokyo" class="tabcontent">
-        <img src="./images/logo1.jpg" alt="可回收物">
-        <p>湿垃圾是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p>
-        <h5>投放要求：</h5>
-        <ul>
-            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
-            <li>有包装物的湿垃圾应</li>
-        </ul>
+        <div class="mycher">
+            <img src="./images/logo1.jpg" alt="可回收物">
+            <p><b>可回收物</b>是指事宜回收和可循环再利用的废弃物。主要包括废玻璃，废金属，废塑料，废纸张，废知物</p>
+            <h5>投放要求：</h5>
+            <ul >
+                <li >轻投轻饭</li>
+                <li >清洁干燥，避免污染</li>
+                <li >废纸尽量平整</li>
+                <li >立体包装请清空内容物，清洁后压扁投放</li>
+                <li >有尖锐边角的，应包裹后投放</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="list-group">
+                    <li class="list-group-item">#######</li>
+                    <li class="list-group-item">#######</li>
+                    <li class="list-group-item">#######</li>
+                    <li class="list-group-item">#######</li>
+            </ul>
+        </div>
     </div>
 
-    <div id="Paris" class="tabcontent">
-        <img src="./images/logo3.png" alt="有害垃圾">
-        <p>湿垃圾是指易腐的生化物质废弃物。包括剩饭剩菜。瓜皮果核。花卉绿植。肉类碎骨。过期食品。餐厨垃圾等</p> 
-        <h5>投放要求：</h5>
-        <ul>
-            <li>纯流质的食物垃圾，如牛奶等，应直接倒进下水口</li>
-            <li>有包装物的湿垃圾应</li>
-        </ul>
+    <div id="Use" class="tabcontent">
+        <div class="mycher">
+            <img src="./images/logo3.png" alt="有害垃圾">
+            <p><b>有害垃圾</b>是指对人体健康有害或者自然环境造成直接或者潜在危害的零星废弃物，单位集中除外。主要包括废电池，废灯管，废药品等</p> 
+            <h5>投放要求：</h5>
+            <ul >
+                <li >充电电池，乐扣电池，蓄电池投放时请注意轻放</li>
+                <li >油漆桶，杀虫剂如有残留请封闭后投放</li>
+                <li>荧光灯，节能灯易破损的请连包装包裹后轻放</li>
+                <li >废药品 及其包装连包装一并投放</li>
+            </ul>
+        </div>
+            <div>
+                <ul class="list-group">
+                        <li class="list-group-item">#######</li>
+                        <li class="list-group-item">#######</li>
+                        <li class="list-group-item">#######</li>
+                        <li class="list-group-item">#######</li>
+                    </ul>
+            </div>
+        
 </body>
 </html>
