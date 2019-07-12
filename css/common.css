@@ -55,7 +55,7 @@ div.tab button {
     background-color:red;
 }
 
-.test1 {
+button .test1 {
     border-left: 5px solid rgb(2, 248, 166);
 }
 .test2{
